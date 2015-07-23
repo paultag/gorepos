@@ -62,7 +62,7 @@ func loadRoutes(packages []Package) (routes map[string]*Package) {
 
 	for _, pkg := range packages {
 		for _, route := range pkg.GetRoutes() {
-			routes[route] = &pkg
+			routes[route] = pkg
 		}
 	}
 	return
