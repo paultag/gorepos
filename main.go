@@ -37,7 +37,7 @@ func writePageError(w http.ResponseWriter, message string, code int) error {
 	return writePage(w, message, code)
 }
 
-func writePageGo(w http.ResponseWriter, path string, pkg *Package, code int) error {
+func writePageGo(w http.ResponseWriter, path string, pkg Package, code int) error {
 	return writePage(w, fmt.Sprintf(`<!DOCTYPE html><html>
 	<head><meta charset="utf-8"><title>%s</title><meta name="go-import" content="%s %s %s"></head>
     <body>%s</body>
@@ -57,8 +57,8 @@ func loadConfig() (ret []Package, err error) {
 	return
 }
 
-func loadRoutes(packages []Package) (routes map[string]*Package) {
-	routes = map[string]*Package{}
+func loadRoutes(packages []Package) (routes map[string]Package) {
+	routes = map[string]Package{}
 
 	for _, pkg := range packages {
 		for _, route := range pkg.GetRoutes() {
