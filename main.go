@@ -84,7 +84,7 @@ func main() {
 		if val, ok := routes[route]; ok {
 			writePageGo(w, req.Host+route, val, 200)
 		} else {
-			writePageError(w, ":(", 401)
+			writePageError(w, ":(", 404)
 		}
 	})
 	http.ListenAndServe(":8000", mux)
