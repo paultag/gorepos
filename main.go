@@ -82,7 +82,7 @@ func main() {
 	mux.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		route := req.URL.Path
 		if val, ok := routes[route]; ok {
-			writePageGo(w, req.Host+route, val, 200)
+			writePageGo(w, "pault.ag"+val.Path, val, 200)
 		} else {
 			writePageError(w, ":(", 404)
 		}
