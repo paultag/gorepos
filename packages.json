@@ -1,9 +1,11 @@
 [
-    {"Repo": "git://github.com/paultag/go-debian",
+    {"Repo": "https://github.com/paultag/go-debian.git",
      "Path": "/go/debian",
-     "Packages": ["control", "dependency", "version"]},
+     "Packages": ["control", "dependency", "version"],
+     "Url": "https://github.com/paultag/go-debian"},
 
-    {"Repo": "git://github.com/paultag/go-topsort",
+    {"Repo": "https://github.com/paultag/go-topsort.git",
      "Path": "/go/topsort",
-     "Packages": []}
+     "Packages": [],
+     "Url": "https://github.com/paultag/go-topsort"}
 ]

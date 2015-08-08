@@ -1,8 +1,10 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
+	"html/template"
 	"io/ioutil"
 	"net/http"
 )
@@ -12,6 +14,7 @@ type Package struct {
 	Repo     string
 	Path     string
 	Packages []string
+	Url      string
 }
 
 func (p Package) GetRoutes() (ret []string) {
@@ -38,10 +41,17 @@ func writePageError(w http.ResponseWriter, message string, code int) error {
 }
 
 func writePageGo(w http.ResponseWriter, path string, pkg Package, code int) error {
-	return writePage(w, fmt.Sprintf(`<!DOCTYPE html><html>
-	<head><meta charset="utf-8"><title>%s</title><meta name="go-import" content="%s %s %s"></head>
-    <body>%s</body>
-</html>`, "Package!", path, "git", pkg.Repo, "Package!"), code)
+	t, err := template.ParseFiles("template.html")
+	if err != nil {
+		return err
+	}
+	pkg.Path = path
+	var page bytes.Buffer
+	err = t.Execute(&page, pkg)
+	if err != nil {
+		return err
+	}
+	return writePage(w, page.String(), code)
 }
 
 // }}}
@@ -81,10 +91,14 @@ func main() {
 
 	mux.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		route := req.URL.Path
+		var err error
 		if val, ok := routes[route]; ok {
-			writePageGo(w, "pault.ag"+val.Path, val, 200)
+			err = writePageGo(w, "pault.ag"+val.Path, val, 200)
 		} else {
-			writePageError(w, ":(", 404)
+			err = writePageError(w, ":(", 404)
+		}
+		if err != nil {
+			writePageError(w, fmt.Sprintf("error: %v", err), 400)
 		}
 	})
 	http.ListenAndServe(":8000", mux)

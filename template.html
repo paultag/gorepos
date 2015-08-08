@@ -1,0 +1,15 @@
+<!DOCTYPE html><html>
+	<head>
+		<meta charset="utf-8">
+		<title>{{ .Path }}</title>
+		<meta name="go-import" content="{{ .Path }} git {{ .Repo }}">
+	</head>
+	<body>
+		<div>package: <code>{{ .Path }}</code></div>
+		<div>source: <a href="{{ .Url }}">{{ .Url }}</a></div>
+		<div>godocs:<ul>
+			<li><a href="https://godoc.org/{{ .Path }}">{{ .Path }}</a></li>{{range .Packages}}
+			<li><a href="https://godoc.org/{{ $.Path }}/{{ . }}">{{ $.Path }}/{{ . }}</a></li>{{end}}
+		</ul></div>
+	</body>
+</html>
