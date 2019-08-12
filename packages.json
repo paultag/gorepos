@@ -1,11 +1,293 @@
 [
-    {"Repo": "https://github.com/paultag/go-debian.git",
-     "Path": "/go/debian",
-     "Packages": ["control", "dependency", "internal", "version"],
-     "Url": "https://github.com/paultag/go-debian"},
-
-    {"Repo": "https://github.com/paultag/go-topsort.git",
-     "Path": "/go/topsort",
-     "Packages": [],
-     "Url": "https://github.com/paultag/go-topsort"}
+    {
+        "Packages": [
+            "control",
+            "dependency",
+            "internal",
+            "version",
+            "changelog",
+            "hashio",
+            "deb"
+        ],
+        "Path": "/go/debian",
+        "Repo": "https://github.com/paultag/go-debian",
+        "Url": "https://github.com/paultag/go-debian"
+    },
+    {
+        "Packages": [
+            "acl",
+            "ca",
+            "client",
+            "pb",
+            "policy",
+            "server",
+            "store",
+            "utils",
+            "version"
+        ],
+        "Path": "/go/cybercom",
+        "Repo": "https://github.com/paultag/cybercom",
+        "Url": "https://github.com/paultag/cybercom"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/archive",
+        "Repo": "https://github.com/paultag/go-archive",
+        "Url": "https://github.com/paultag/go-archive"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/modprobe",
+        "Repo": "https://github.com/paultag/go-modprobe",
+        "Url": "https://github.com/paultag/go-modprobe"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/topsort",
+        "Repo": "https://github.com/paultag/go-topsort",
+        "Url": "https://github.com/paultag/go-topsort"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/schroot",
+        "Repo": "https://github.com/paultag/go-schroot",
+        "Url": "https://github.com/paultag/go-schroot"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/sbuild",
+        "Repo": "https://github.com/paultag/go-sbuild",
+        "Url": "https://github.com/paultag/go-sbuild"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/reprepro",
+        "Repo": "https://github.com/paultag/go-reprepro",
+        "Url": "https://github.com/paultag/go-reprepro"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/resolver",
+        "Repo": "https://github.com/paultag/go-resolver",
+        "Url": "https://github.com/paultag/go-resolver"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/fancytext",
+        "Repo": "https://github.com/paultag/go-fancytext",
+        "Url": "https://github.com/paultag/go-fancytext"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/deceive",
+        "Repo": "https://github.com/paultag/deceive",
+        "Url": "https://github.com/paultag/deceive"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/minica",
+        "Repo": "https://github.com/paultag/minica",
+        "Url": "https://github.com/paultag/minica"
+    },
+    {
+        "Packages": [
+            "descend"
+        ],
+        "Path": "/go/descend",
+        "Repo": "https://github.com/paultag/descend",
+        "Url": "https://github.com/paultag/descend"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/service",
+        "Repo": "https://github.com/paultag/go-service",
+        "Url": "https://github.com/paultag/go-service"
+    },
+    {
+        "Packages": [
+            "minion"
+        ],
+        "Path": "/go/minion",
+        "Repo": "https://github.com/paultag/minion",
+        "Url": "https://github.com/paultag/minion"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/config",
+        "Repo": "https://github.com/paultag/go-config",
+        "Url": "https://github.com/paultag/go-config"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/haversine",
+        "Repo": "https://github.com/paultag/go-haversine",
+        "Url": "https://github.com/paultag/go-haversine"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/wmata",
+        "Repo": "https://github.com/paultag/go-wmata",
+        "Url": "https://github.com/paultag/go-wmata"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/mailer",
+        "Repo": "https://github.com/paultag/go-mailer",
+        "Url": "https://github.com/paultag/go-mailer"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/blobstore",
+        "Repo": "https://github.com/paultag/go-blobstore",
+        "Url": "https://github.com/paultag/go-blobstore"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/sense",
+        "Repo": "https://github.com/paultag/go-sense",
+        "Url": "https://github.com/paultag/go-sense"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/politico",
+        "Repo": "https://github.com/paultag/go-politico",
+        "Url": "https://github.com/paultag/go-politico"
+    },
+    {
+        "Packages": [
+            "drivers/epspos"
+        ],
+        "Path": "/go/epson",
+        "Repo": "https://github.com/paultag/go-epson",
+        "Url": "https://github.com/paultag/go-epson"
+    },
+    {
+        "Packages": [
+            "database",
+            "dictd",
+            "format",
+            "utils"
+        ],
+        "Path": "/go/dictd",
+        "Repo": "https://github.com/paultag/go-dictd",
+        "Url": "https://github.com/paultag/go-dictd"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/pkcs7",
+        "Repo": "https://github.com/paultag/go-pkcs7",
+        "Url": "https://github.com/paultag/go-pkcs7"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/inept",
+        "Repo": "https://github.com/paultag/inept",
+        "Url": "https://github.com/paultag/inept"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/proc-arp",
+        "Repo": "https://github.com/paultag/go-proc-arp",
+        "Url": "https://github.com/paultag/go-proc-arp"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/ykpiv",
+        "Repo": "https://github.com/paultag/go-ykpiv",
+        "Url": "https://github.com/paultag/go-ykpiv"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/gecos",
+        "Repo": "https://github.com/paultag/go-gecos",
+        "Url": "https://github.com/paultag/go-gecos"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/maclookup",
+        "Repo": "https://github.com/paultag/go-maclookup",
+        "Url": "https://github.com/paultag/go-maclookup"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/macchanger",
+        "Repo": "https://github.com/paultag/go-macchanger",
+        "Url": "https://github.com/paultag/go-macchanger"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/nanopi",
+        "Repo": "https://github.com/paultag/nanopi",
+        "Url": "https://github.com/paultag/nanopi"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/nytimes",
+        "Repo": "https://github.com/paultag/go-nytimes",
+        "Url": "https://github.com/paultag/go-nytimes"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/loopback",
+        "Repo": "https://github.com/paultag/go-loopback",
+        "Url": "https://github.com/paultag/go-loopback"
+    },
+    {
+        "Packages": ["xattr"],
+        "Path": "/go/ima",
+        "Repo": "https://github.com/paultag/go-ima",
+        "Url": "https://github.com/paultag/go-ima"
+    },
+    {
+        "Packages": ["parser"],
+        "Path": "/go/sniff",
+        "Repo": "https://github.com/paultag/sniff",
+        "Url": "https://github.com/paultag/sniff"
+    },
+    {
+        "Packages": ["biometrics", "pkcs11"],
+        "Path": "/go/piv",
+        "Repo": "https://github.com/paultag/go-piv",
+        "Url": "https://github.com/paultag/go-piv"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/cbeff",
+        "Repo": "https://github.com/paultag/go-cbeff",
+        "Url": "https://github.com/paultag/go-cbeff"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/fasc",
+        "Repo": "https://github.com/paultag/go-fasc",
+        "Url": "https://github.com/paultag/go-fasc"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/othername",
+        "Repo": "https://github.com/paultag/go-othername",
+        "Url": "https://github.com/paultag/go-othername"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/pivtk",
+        "Repo": "https://github.com/paultag/pivtk",
+        "Url": "https://github.com/paultag/pivtk"
+    },
+    {
+        "Packages": [],
+        "Path": "/go/technicolor",
+        "Repo": "https://github.com/paultag/go-technicolor",
+        "Url": "https://github.com/paultag/go-technicolor"
+    },
+    {
+        "Packages": [
+            "armor",
+            "messages",
+            "sixbit"
+        ],
+        "Path": "/go/ais",
+        "Repo": "https://github.com/paultag/go-ais",
+        "Url": "https://github.com/paultag/go-ais"
+    }
 ]
