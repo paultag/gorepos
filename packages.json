@@ -289,5 +289,12 @@
         "Path": "/go/ais",
         "Repo": "https://github.com/paultag/go-ais",
         "Url": "https://github.com/paultag/go-ais"
+    },
+
+    {
+        "Packages": [],
+        "Path": "/go/rf",
+        "Repo": "https://github.com/paultag/go-rf",
+        "Url": "https://github.com/paultag/go-rf"
     }
 ]
