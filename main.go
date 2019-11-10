@@ -7,6 +7,7 @@ import (
 	"html/template"
 	"io"
 	"io/ioutil"
+	"log"
 	"os"
 	"path"
 )
@@ -46,7 +47,7 @@ func loadConfig() (ret []Package, err error) {
 func main() {
 	packages, err := loadConfig()
 	if err != nil {
-		fmt.Errorf("%s\n", err)
+		log.Fatalf("%s\n", err)
 		return
 	}
 

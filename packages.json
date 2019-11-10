@@ -290,7 +290,12 @@
         "Repo": "https://github.com/paultag/go-ais",
         "Url": "https://github.com/paultag/go-ais"
     },
-
+    {
+        "Packages": [],
+        "Path": "/go/diskring",
+        "Repo": "https://github.com/paultag/go-diskring",
+        "Url": "https://github.com/paultag/go-diskring"
+    },
     {
         "Packages": [],
         "Path": "/go/rf",
