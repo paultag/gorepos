@@ -298,6 +298,12 @@
     },
     {
         "Packages": [],
+        "Path": "/go/psi",
+        "Repo": "https://github.com/paultag/go-psi",
+        "Url": "https://github.com/paultag/go-psi"
+    },
+    {
+        "Packages": [],
         "Path": "/go/rf",
         "Repo": "https://github.com/paultag/go-rf",
         "Url": "https://github.com/paultag/go-rf"
