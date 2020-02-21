@@ -304,6 +304,12 @@
     },
     {
         "Packages": [],
+        "Path": "/go/pksigner",
+        "Repo": "https://github.com/paultag/go-pksigner",
+        "Url": "https://github.com/paultag/go-pksigner"
+    }
+    {
+        "Packages": [],
         "Path": "/go/rf",
         "Repo": "https://github.com/paultag/go-rf",
         "Url": "https://github.com/paultag/go-rf"
