@@ -35,8 +35,8 @@ func writePage(w io.Writer, path string, pkg Package) error {
 	return err
 }
 
-func loadConfig() (ret []Package, err error) {
-	content, err := ioutil.ReadFile("packages.json")
+func loadConfig(namespace string) (ret []Package, err error) {
+	content, err := ioutil.ReadFile(fmt.Sprintf("%s.json", namespace))
 	if err != nil {
 		return
 	}
@@ -45,13 +45,13 @@ func loadConfig() (ret []Package, err error) {
 }
 
 func main() {
-	packages, err := loadConfig()
+	namespace := os.Args[1]
+
+	packages, err := loadConfig(namespace)
 	if err != nil {
 		log.Fatalf("%s\n", err)
 		return
 	}
-
-	namespace := "pault.ag"
 
 	for _, pkg := range packages {
 		packages := pkg.Packages
