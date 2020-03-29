@@ -45,7 +45,12 @@ func loadConfig(namespace string) (ret []Package, err error) {
 }
 
 func main() {
+	if len(os.Args) != 3 {
+		fmt.Printf("main.go namespace fs-root-dir\n")
+	}
+
 	namespace := os.Args[1]
+	root := os.Args[2]
 
 	packages, err := loadConfig(namespace)
 	if err != nil {
@@ -59,7 +64,7 @@ func main() {
 		for _, subpackage := range packages {
 			pkgpath := path.Join(namespace, pkg.Path)
 
-			root := path.Join(".", pkg.Path, subpackage)
+			root := path.Join(root, pkg.Path, subpackage)
 
 			if err := os.MkdirAll(root, 0755); err != nil {
 				fmt.Errorf("%s\n", err)
