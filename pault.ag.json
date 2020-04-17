@@ -193,8 +193,8 @@
     {
         "Packages": [],
         "Path": "/go/ykpiv",
-        "Repo": "https://github.com/paultag/go-ykpiv",
-        "Url": "https://github.com/paultag/go-ykpiv"
+        "Repo": "https://github.com/go-piv/go-ykpiv",
+        "Url": "https://github.com/go-piv/go-ykpiv"
     },
     {
         "Packages": [],
