@@ -20,7 +20,7 @@ type Package struct {
 }
 
 func writePage(w io.Writer, path string, pkg Package) error {
-	t, err := template.ParseFiles("template.html")
+	t, err := template.ParseFiles("layouts/gorepos.html")
 	if err != nil {
 		return err
 	}
